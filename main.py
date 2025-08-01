@@ -46,21 +46,25 @@ while esc in opc:
         for percorrer in lista:
             print(percorrer)
 
-    elif esc == 3:
+    elif esc == 4:
         print("""
  ------------------------------------------
-|           MARCAR COMO CONCLUÍDA         |
+|             REMOVER TAREFA              |
  ------------------------------------------
 """)
-        tc = input("Quais tarefas você já concluiu? ")
+        c = 0
+        tc = input("Quais tarefas você deseja remover? ")
+        lista.pop(tc)
 
-        for x in lista:
-            if tc == x:
-                lista.remove(x)
 
-    elif esc == 4:
-            print("""
+
+    elif esc == 3:
+
+        print("""
  ------------------------------------------
-|             REMOVER TAREFA             |
+|         MARCAR COMO CONCLUIDA           |
  ------------------------------------------
 """)
+        conclu = input("Qual tarefa você concluiu? ")
+        lista [conclu] = "[x] " + lista [conclu] 
+        print({lista[conclu]})
