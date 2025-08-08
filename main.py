@@ -3,9 +3,10 @@ lista = []
 opc = [1,2,3,4,5,99]
 esc = 99
 bn = open("lista_de_tarefas.txt","x")
-def salvar():
+def salvar(lista):
     with open("lista_de_tarefas.txt", "a") as arquivo:
-        arquivo.write(f"{lista}")
+        for tarefa in lista:
+            arquivo.write(tarefa + "\n")
 
 while esc in opc:
     print("""
@@ -24,6 +25,7 @@ while esc in opc:
     """)    
     esc = int(input("Digite o número referente so que deseja fazer: "))    
     if esc == 0:
+        salvar(lista)
         break
     elif esc == 1:
         print("""
@@ -51,7 +53,6 @@ while esc in opc:
         for percorrer in lista:
             print(f"{c} - {percorrer}")
             c+=1
-            salvar()
 
     elif esc == 4:
         print("""
@@ -62,7 +63,6 @@ while esc in opc:
 
         tc = int(input("Quais tarefas você deseja remover? "))
         lista.pop(tc)
-        salvar()
 
 
 
@@ -76,7 +76,7 @@ while esc in opc:
     
         conclu = int(input("Qual tarefa você concluiu? "))
         lista[conclu] = " [x] " + lista[conclu]
-        print(lista)
-        salvar()
+        for percorr in lista:
+            print(lista)
 
 
