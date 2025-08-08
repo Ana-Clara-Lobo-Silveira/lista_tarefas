@@ -77,6 +77,6 @@ while esc in opc:
         conclu = int(input("Qual tarefa você concluiu? "))
         lista[conclu] = " [x] " + lista[conclu]
         for percorr in lista:
-            print(lista)
+            print(percorr)
 
 
