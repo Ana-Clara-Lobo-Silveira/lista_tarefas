@@ -19,7 +19,6 @@ while esc in opc:
     |   2- Listar tarefas                      |
     |   3- Marcar como concluída               |
     |   4- Remover tarefa                      |
-    |   5- Salvar a lista de tarefas           |
     |   0- Sair                                |
     ------------------------------------------
     """)    
