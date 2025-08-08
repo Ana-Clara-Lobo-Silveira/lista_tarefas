@@ -67,6 +67,6 @@ while esc in opc:
  ------------------------------------------
 """)
     
-        conclu = input("Qual tarefa você concluiu? ")
-        lista[conclu] = "[x] " + lista[conclu] 
-        print({lista[conclu]})
+        conclu = int(input("Qual tarefa você concluiu? "))
+        lista[conclu] = " [x] " + lista[conclu]
+        print(lista)
